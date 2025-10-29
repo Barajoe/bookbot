@@ -22,10 +22,12 @@ count = char_count(book_text)
 
 def sorted_count(count):
     sorted = []
-    for char in count:
-        if char == str:
-            sorted.update({"char": char})
-        else:
-            sorted.update({"num": char})
+    for char, num in count.items():
+        if not char.isalpha():
+            continue
+        sorted.append({"char": char, "num": num})
     sorted.sort(reverse=True, key=sort_on)
-    return sorted
+    final_list = []
+    for item in sorted:
+        final_list.append(f"{item["char"]}: {item["num"]}")
+    return final_list
