@@ -8,6 +8,6 @@ def get_book_text(filepath):
 book_text = get_book_text("books/frankenstein.txt")
 
 def main():
-    print(f"Found {stats.char_count(book_text)} total words")
+    print(f"Found {char_count(book_text)} total words")
 
 main()
