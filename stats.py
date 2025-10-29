@@ -17,9 +17,6 @@ def get_book_text(filepath):
 def sort_on(items):
     return items["num"]
 
-book_text = get_book_text("books/frankenstein.txt")
-count = char_count(book_text)
-
 def sorted_count(count):
     sorted = []
     for char, num in count.items():
